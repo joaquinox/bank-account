@@ -1,0 +1,23 @@
+{
+  "name": "bank-account",
+  "version": "1.0.0",
+  "description": "bank account app",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaquinox/bank-account-exercise.git"
+  },
+  "author": "Sam Jones",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaquinox/bank-account-exercise/issues"
+  },
+  "homepage": "https://github.com/joaquinox/bank-account-exercise#readme",
+  "devDependencies": {
+    "eslint": "^5.15.0",
+    "jest": "^24.1.0"
+  }
+}
