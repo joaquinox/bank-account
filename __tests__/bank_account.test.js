@@ -14,3 +14,19 @@ describe('deposit money into a current account', () => {
         expect(MY_ACCOUNT.balance).toBe(1300);
     })
 });
+
+describe('withdraw money from a current account', () => {
+
+    test('show current account balance', () => {
+            const MY_ACCOUNT = new CURRENT_ACCOUNT();
+            MY_ACCOUNT.balance = 1200;
+            expect(MY_ACCOUNT.balance).toBe(1200);
+    })
+    
+    test('deposit money into current account', () => {
+            const MY_ACCOUNT = new CURRENT_ACCOUNT();
+            MY_ACCOUNT.balance = 1200;
+            MY_ACCOUNT.withdraw(150);
+            expect(MY_ACCOUNT.balance).toBe(1050);
+    })
+});
