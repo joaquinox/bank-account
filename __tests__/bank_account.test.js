@@ -30,3 +30,12 @@ describe('withdraw money from a current account', () => {
             expect(MY_ACCOUNT.balance).toBe(1050);
     })
 });
+
+describe('check balance of current account', () => {
+
+    test('returns balance of current account', () => {
+            const MY_ACCOUNT = new CURRENT_ACCOUNT();
+            MY_ACCOUNT.balance = 1200;
+            expect(MY_ACCOUNT.checkBalance()).toBe(1200);
+    })
+});

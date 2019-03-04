@@ -11,7 +11,9 @@ CURRENT_ACCOUNT.prototype.withdraw = function(amount) {
     this.balance -= amount;
 };
 
-
+CURRENT_ACCOUNT.prototype.checkBalance = function() {
+    return this.balance;
+};
 
 
 
