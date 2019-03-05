@@ -2,6 +2,12 @@ const CURRENT_ACCOUNT = require('../src/bank_account');
 
 describe('deposit money into current account', () => {
 
+    test('check if value passed is positive integer', () => {
+        const MY_ACCOUNT = new CURRENT_ACCOUNT();
+        MY_ACCOUNT.balance = 1200;
+        expect(() => MY_ACCOUNT.deposit(-100)).toThrow('Number must be greater than 0');
+    })
+
     test('show current account balance', () => {
         const MY_ACCOUNT = new CURRENT_ACCOUNT();
         expect(MY_ACCOUNT.balance).toBe(0);
@@ -17,13 +23,19 @@ describe('deposit money into current account', () => {
 
 describe('withdraw money from current account', () => {
 
+    test('check if value passed is positive integer', () => {
+        const MY_ACCOUNT = new CURRENT_ACCOUNT();
+        MY_ACCOUNT.balance = 1200;
+        expect(() => MY_ACCOUNT.withdraw(-100)).toThrow('Number must be greater than 0');
+    })
+
     test('show current account balance', () => {
             const MY_ACCOUNT = new CURRENT_ACCOUNT();
             MY_ACCOUNT.balance = 1200;
             expect(MY_ACCOUNT.balance).toBe(1200);
     })
     
-    test('deposit money into current account', () => {
+    test('withdraw money from current account', () => {
             const MY_ACCOUNT = new CURRENT_ACCOUNT();
             MY_ACCOUNT.balance = 1200;
             MY_ACCOUNT.withdraw(150);
